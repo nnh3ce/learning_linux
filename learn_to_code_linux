@@ -1,0 +1,94 @@
+#Commands practiced
+Print working directory: pwd
+List all files (even hidden files, prepended with "."): ls -a
+List file permissions: ls -l <file_name.sh>
+Review first 10 lines of file: head sh <file_name.sh>
+Review first bash file:
+      !#/bin/bash                                     #shebang points to bash shell path for bash to run commands
+      echo "Hello"                                    #echo used for displaying text in terminal
+      echo "Today is " `date`                         #date var with backticks for current date and time   
+      echo -e "\nenter the path to directory"         #"-e" tells bash to interpret special character "\n" instead of printing as text
+                                                      # in my WSL Ubuntu version, "-e" is printed and newline is created so it is not needed. 
+      read the_path                                   #read command reads input into the_path var    
+      echo -e "\n your path has the following files and folders: " 
+      ls #the_path                                    #ls provides the paths entered into the_path var by the user
+To make the file executable (runnable):
+      chmod u+x file_name.sh                          #chmod = changes file user permissions to executable mode for the file
+Review of chmod symbolic permissions:
+      = means set the permission exactly
+      + = add
+      - = remove 
+    
+      u = user
+      g = group
+      o = other
+      a = all  types
+
+      r = read (view file contents)
+      w = write (allows modify, overwrite, or delete)
+      x = execute (run file as script)
+Review of chmod numeric permissions:
+      4 = read
+      2 = write
+      1 = execute
+
+      Example: chmod 756 file_name.sh
+      7 = users has read, write, execute (4+2+1 = 7)
+      5 = group has read and execute (4+1)
+      6 = others have read and write (4+2)
+Chmod for folders
+      r (4) = read
+      w (2) = write
+      x (1) = travel through directory
+Chmod folder option
+      chmod -R 755 my_folder = means recursive, changes folder & all files in folde permissions to rwx-rx-rx
+Chmod file option
+      chmod -referenece=old_file.txt new_file.txt = copy old file permissions to new file
+Review different ways to run files
+      ./file_name.sh = tells computer to run file located in current directory (must give file executable permission or will be denied) 
+      bash file_name.sh (prepended with bash means it will run using bash)
+      sh file_name.sh (prepended with sh for shell means it will use the shell terminal's program to run file - could be bash or something else)
+      Practice Breaking Stuff:
+          Removed executable permissions from files, all groups only contained read or write permissions for test files
+              Result:
+                      ./ method   =  permission denied
+                      bash method =  file runs without x permission
+                      sh method   =  file runs without x permission
+              Conclusion:
+                      ./ method is explicit method, must change mode to x permission to run as script
+                      bash doesn't need mode changed to x permission to run as script
+                      sh doesn't need mode changed to x permission to run as script
+Variables in Bash
+      No data types
+      Use "=" to assign values directly to variable
+            small example: country=united_states
+      Use "$" to access variable from output or another variable
+            small example: second_var=$country          
+Reading User input and storing it to Variable
+      #!/bin/bash 
+      echo "What's your name?" 
+      read entered_name 
+      echo -e "\nWelcome to bash tutorial" $entered_name
+            Command:  ./ask_name.sh
+            Result: Welcome to bash tutorial ted
+      #!/bin/bash 
+      echo "What's your name?" 
+      read entered_name 
+      echo "\nWelcome to bash tutorial" $entered_name
+            Command:  ./ask_name.sh
+            Result: \nWelcome to bash tutorial  ted
+      #!/bin/bash 
+      echo "What's your name?" 
+      read entered_name 
+      printf "\nWelcome to bash tutorial" $entered_name
+            Command:  ./ask_name.sh
+            Result:Welcome to bash tutorial<computer_name>:~$
+Reading from a File
+      #!/bin/bash
+      while /
+      read line/
+      do/
+        ehco $line/
+      done < ask_name.sh
+      Return:
+          -bash: syntax error near unexpected token `done'
