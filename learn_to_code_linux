@@ -84,11 +84,94 @@ Reading User input and storing it to Variable
             Command:  ./ask_name.sh
             Result:Welcome to bash tutorial<computer_name>:~$
 Reading from a File
-      #!/bin/bash
-      while /
-      read line/
-      do/
-        ehco $line/
-      done < ask_name.sh
-      Return:
+      #!/bin/bash                         #shebang to run bash
+      while /                             #trigger while loop
+      read line/                          # read while there is stdin for each line of text
+      do/                                 # beginning of loop body
+        ehco $line/                       # prints the value in the variable for each line
+      done < ask_name.sh                  # end of loop body & redirection of stdout from ask_name file text
+      Returns:
           -bash: syntax error near unexpected token `done'
+      Problem:
+            Remove "/" and just use carriage return. ">" will show to indicate continuation of statement
+Command Line Args
+      $1 = 1st arg passed to functino or script
+      $2 = 2nd arg passed to function or script 
+      etc...
+      Example:
+            #!bin/bash
+            echo "Hello $1!"
+      Run in terminal: 
+            ./args_file.sh ted
+      Returns:
+            Hello ted!
+Print in terminal
+      echo "Hello there!"
+Write & Append text to file
+      echo "Writing this sentence to a new file" > write_to_file.sh
+      echo "Here's more text that has been appended." >> write_to_file
+Printing contents of file
+      while Loop
+      cat
+      head (first 10 lines)
+Find exact folder files are located in
+      Run in terminal:
+            explorer.exe .
+      Returns
+            Opens folder explorer with location
+Basic Commands
+      cd: Change the directory to a different location.
+      ls: List the contents of the current directory.
+      mkdir: Create a new directory.
+      touch: Create a new file.
+      rm: Remove a file or directory.
+      cp: Copy a file or directory.
+      mv: Move or rename a file or directory.
+      echo: Print text to the terminal.
+      cat: Concatenate and print the contents of a file.
+      grep: Search for a pattern in a file.
+      chmod: Change the permissions of a file or directory.
+      sudo: Run a command with administrative privileges.
+      history: Show a list of previously executed commands.
+      ps: Display information about running processes.
+      df = disk free: Filesystem, 1K-blocks, Used, Available, Use%, Mounted ON
+            Filesystem -  the disk/filesystem being reported, Answer question: what provides storage?
+                  none = usually means there isn't a normal disk device associated with that mount, special virtual system, temporary memory-basesd
+                  /dev/sdb = represent a whole physical disk/device
+                  rootfs = The root filesystem is the filesystem that provides the Linux system's main directory tree:
+                        /
+                        ├── home
+                        ├── etc
+                        ├── usr
+                        ├── var
+                        ├── bin
+                        └── ...
+                  drivers = special filesystem/mount that exposes Windows drivers to the Linux environment.
+            Mounted On - where that filesystem appears in the Linux directory structure, Answers question: where is the storage?
+                  
+            A disk is the physical storage; a filesystem is the organizational structure that allows the operating system to store and retrieve files on it
+If then statements
+      if to being statement
+      fi to end statmenet
+      Why?
+            It's mostly a design choice from Unix shell history, and there's a practical reason: Bash uses words to clearly mark the beginning and end of multi-line structures.
+            Bash inherited this style from the Bourne shell (sh), which was designed in the 1970s.
+            The original shell wanted syntax that was:
+                  easy for the shell to recognize
+                  readable in multi-line scripts
+                  clearly matched between the beginning and ending
+      Format
+            if [[condition]];                  #semicolon is similar to python's colons
+                  then statement                  
+            elif [[condition]];                #elif similar to python  
+                  then statement
+            else
+                  do statement
+            fi
+      Logical Operators      
+            -a = And
+            -o = Or
+            -gt = greater than
+            -lt = less than
+      Condition Example
+            if [ $a -gt 60 -a $b -lt 100 ] = if var a is greater than 60 AND var b is less than 100
