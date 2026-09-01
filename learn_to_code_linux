@@ -173,5 +173,87 @@ If then statements
             -o = Or
             -gt = greater than
             -lt = less than
+            -le = less than or equal to
+            -ge = greater than or equal to
+            -eq = equal to 
+            -ne = not equal
       Condition Example
             if [ $a -gt 60 -a $b -lt 100 ] = if var a is greater than 60 AND var b is less than 100
+While Loop with If statement
+      Example:
+                  #!/bin/bash
+                  i=1
+                  while [[ $i -le 10 ]] ; do
+                  echo "$i"
+                  (( i += 1 ))
+                  done
+      Problem:
+                  Forgot to add spaces between each set of characters. 
+      Solution:
+                  Added space before double square bracket. 
+      Conlusion:
+                  Similar to Python, spaces are very important but used differently.
+For Loop
+      Example:
+                  for i  in {1..5}            #Assign var i to 1 through 5
+                  do
+                        echo $i               #print var
+                  done                        #will print 1 through 5 (inclusive)
+Case Statements
+      Example Syntax:
+                  case expression in
+                      pattern1)
+                          # code to execute if expression matches pattern1
+                          ;;
+                      pattern2)
+                          # code to execute if expression matches pattern2
+                          ;;
+                      pattern3)
+                          # code to execute if expression matches pattern3
+                          ;;
+                      *)
+                          # code to execute if none of the above patterns match expression
+                          ;;
+                  esac
+      Example:
+                  fruit="apple"
+                  case $fruit in 
+                  "apple")
+                        echo "This is red fruit"
+                        ;;
+                  case $fruit in
+                  "banana")
+                        echo "This is yellow fruit"
+                        ;;
+                  case $fruit in 
+                  "orange")
+                        echo "This is orange fruit"
+                        ;;
+                  *)
+                        echo "unknown fruit"
+                        ;;
+                  esac
+Cron
+      Example Syntax:
+                  * * * * * sh /path/to/script.sh
+                  m h d m w
+                  m = minutes
+                  h = hours
+                  d = days
+                  m = months
+                  w = weekdays
+      Another Example:
+                  Schedule	Description	Example
+                  0 0	      Run a script at midnight every day	0 0 /path/to/script.sh
+                  /5	      Run a script every 5 minutes	/5 /path/to/script.sh
+                  0 6 1-5	Run a script at 6 am from Monday to Friday	0 6 1-5 /path/to/script.sh
+                  0 0 1-7	Run a script on the first 7 days of every month	0 0 1-7 /path/to/script.sh
+                  0 12 1	Run a script on the first day of every month at noon	0 12 1 /path/to/script.sh
+      # Check cron service on Linux system
+                  sudo systemctl status cron.service
+      Crontabs use the following flags for adding and listing cron jobs.
+                  **crontab -e**: edits crontab entries to add, delete, or edit cron jobs.
+                  **crontab -l**: list all the cron jobs for the current user.
+                  **crontab -u username -l**: list another user's crons.
+                  **crontab -u username -e**: edit another user's crons.
+Debuggig & Troubleshooting
