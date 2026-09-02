@@ -237,7 +237,7 @@ Cron
       Example Syntax:
                   * * * * * sh /path/to/script.sh
                   m h d m w
-                  m = minutes
+                  m = minute
                   h = hours
                   d = days
                   m = months
@@ -256,4 +256,43 @@ Cron
                   **crontab -l**: list all the cron jobs for the current user.
                   **crontab -u username -l**: list another user's crons.
                   **crontab -u username -e**: edit another user's crons.
-Debuggig & Troubleshooting
+      Logs
+                  Logs are maintained for all the scheduled jobs. You can check and verify in logs if a specific job ran as intended or not.
+                  Location:
+                        /var/log/syslog
+                  Example:            
+                        grep CRON /var/log/syslog
+                  Follow jobs live:
+                        tail -f /var/log/syslog | grep CRON
+                  Check that the cron service is running:
+                        systemctl status cron
+Debugging & Troubleshooting
+      Commands
+                  set -x = For debug mode enter in the script after the shebang, indicated by "+". Prints each step as variable changes.      
+                  set -e = Enter in the script after the shebang, cause code to fail when error is thrown by command.
+                  "$?" = represents exit code of most recent command
+                  echo = used like a print function in Python
+Boot Process
+      Definition: Sequence of steps that occurs from the moment a computer is powered on until the operating system is fully loaded and ready for use.
+      Steps      
+                  1) Power On
+                  2) BIOS (Basic Input/Output System)
+                  3) Master Boot Record (MBR) or EFI Parition
+                  4) Boot Loader (e.g. GRUB)
+                  5) Kernel
+                  6) Initial RAM dis - initramfs
+                  7) /sbin/init (parent process)
+                  8) Command shell using getty
+                  9) Graphical User Interface (X Window or Wayland)
+      BIOS
+                  Definition: 
+                              A small program stored on a read-only memory (ROM) chip on a computer’s motherboard. It is the first software that 
+                              runs when you power on your computer, even before the operating system is involved.
+                  Actions: 
+                              The BIOS performs a series of checks and initializations known as the Power-On Self-Test (POST).
+                              During POST, the BIOS initializes critical hardware components such as the screen, keyboard, and memory, ensuring that everything is functioning correctly before the operating system loads.
+                              The BIOS also finds and loads the bootloader, which then starts the operating system.
+                              Once the BIOS finishes its checks, it hands control over to the next stage of the boot process, which is managed by the operating system.
+                  BLUF:
+                              The BIOS acts as a bridge between the computer’s hardware and its operating system, ensuring that everything is ready for the OS to take over.
+                              
