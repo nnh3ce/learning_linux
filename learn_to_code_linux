@@ -295,4 +295,28 @@ Boot Process
                               Once the BIOS finishes its checks, it hands control over to the next stage of the boot process, which is managed by the operating system.
                   BLUF:
                               The BIOS acts as a bridge between the computer’s hardware and its operating system, ensuring that everything is ready for the OS to take over.
-                              
+      MBR, EFI Partition & Boot Loader
+                  Definition: 
+                              Boot loader is small program stored on system's storage on hard disk or solid state drive typically.
+                  Location:
+                              On traditional BIOS/MBR systems, the boot loader resides in the boot sector. 
+                              On more modern systems that use the (Unified) Extensible Firmware Interface (EFI or UEFI), it is stored in the EFI partition.
+                  Actions:
+                              Afterward, the system retrieves information such as the current date, time, and hardware configuration from the CMOS. 
+                              This small battery-powered memory chip retains data even when the system is powered off.
+                  Common Boot Loader:
+                              GRUB (GRand Unified Boot Loader) – the most common boot loader for Linux distributions
+                  Options:
+                              Most Linux boot loaders provide a menu or user interface that allows you to choose between multiple operating systems or different Linux kernel versions. 
+                              When you select a Linux option, the boot loader’s main job is to load the kernel image and the initial RAM disk (initrd or initramfs) into memory. 
+                              These components contain essential drivers and files that keep the system booting until the whole operating system is loaded.
+                  BIOS Boot Process:
+                              BIOS -> MBR -> Boot Loader -> Kernel -> OS
+                  UEFI Boot Process:
+                              UEFI -> EFI Boot Loader -> Kernel - OS
+                  Commands
+                              Check Vendor Version = sudo dmidecode -t bios
+                              Check if using BIOS or UEFI = [ -d /sys/firmware/efi ] && echo "UEFI" || echo "Legacy BIOS"
+
+
+      
