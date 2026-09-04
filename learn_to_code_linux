@@ -319,6 +319,39 @@ Boot Process
                               Check if using BIOS or UEFI = [ -d /sys/firmware/efi ] && echo "UEFI" || echo "Legacy BIOS"
       Manual
                   boot man = more info on boot loader
-
+      Parent Process
+                  sbin/init
+                              Definition: After completing hardware initialization and mounting the root filesystem, the Linux kernel launches the first user-space process: /sbin/init. 
+                              This init process becomes the parent of all other user-space processes and starts the services and applications needed to bring the full operating system to a usable state.
+                  sbin = "system binaries"
+                  systemd = "system daemon"
+                  sbin/init is the path of the progam systemd
+                  What is a symbolic link?
+                              A symbolic link (or symlink) is a special file that acts like a shortcut/reference to another file or directory.
+                              For example:
+                              /sbin/init
+                                   │
+                                   └────► /lib/systemd/systemd
+                              If /sbin/init is a symbolic link to /lib/systemd/systemd, accessing /sbin/init takes you to the target.
+                  ls -l /sbin/init = lrwxrwxrwx 1 root root 22 Jul 27 16:44 /sbin/init -> ../lib/systemd/systemd *The l at the beginning (lrwx...) means link.
+                  Why are there symbolic links (symlinks)?
+                              Avoid duplication — Access the same file from multiple locations without creating copies.
+                              Maintain compatibility — Keep old paths working when files/programs move, like /sbin/init → systemd.
+                              Create convenient names — Give long or complicated paths shorter, easier names.
+                              Switch between versions — Point a stable path to different versions of a program.
+                              Create aliases — A symlink provides another name that points to the actual file or directory.
+                  How to create symlink?
+                              You can create a symbolic link with ln -s:
+                                          ln -s /path/to/original /path/to/link
+                              For example:
+                                          ln -s /home/alex/myfile /tmp/myshortcut
+                              Now:
+                                          /tmp/myshortcut
+                                                 │
+                                                 └────► /home/alex/myfile
+                                          Reading /tmp/myshortcut reads the target:
+                                          cat /tmp/myshortcut
+                  Commands:
+                              manual description = man systemd
 
       
