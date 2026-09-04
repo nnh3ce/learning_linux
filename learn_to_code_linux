@@ -317,6 +317,8 @@ Boot Process
                   Commands
                               Check Vendor Version = sudo dmidecode -t bios
                               Check if using BIOS or UEFI = [ -d /sys/firmware/efi ] && echo "UEFI" || echo "Legacy BIOS"
+      Manual
+                  boot man = more info on boot loader
 
 
       
