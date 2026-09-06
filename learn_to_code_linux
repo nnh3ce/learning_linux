@@ -353,5 +353,13 @@ Boot Process
                                           cat /tmp/myshortcut
                   Commands:
                               manual description = man systemd
+      Apache Web Server Lab
+                  Troubleshooting finding status
+                              wsl -u root = type in Windows PowerShell
+                              ls /home = get username
+                              passwd <user_name> = enter username to open password manager
+                              enter password
+                              close PowerShell and Open WSL Ubuntu
+                  
 
       
