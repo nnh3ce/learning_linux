@@ -377,6 +377,8 @@ Boot Process
                               sudo systemctl status apache2 = Confirm Start 
                               sudo systemctl stop apache2 = Stop Service
                               sudo systemctl status apache2 = Confirm Stop
+Understanding Linux Filesystem
+            
 
                   
 
