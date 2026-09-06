@@ -354,12 +354,30 @@ Boot Process
                   Commands:
                               manual description = man systemd
       Apache Web Server Lab
-                  Troubleshooting finding status
+                  Troubleshooting conclusion for changing passwordus
                               wsl -u root = type in Windows PowerShell
                               ls /home = get username
                               passwd <user_name> = enter username to open password manager
                               enter password
                               close PowerShell and Open WSL Ubuntu
+                  Troubleshooting starting service
+                              sudo systemctl start apache2 = starts apache2 service
+                                    Result: Failed to start apache2.service: Unit apache2.service not found
+                              sudo systemctl start httpd = starts httpd service
+                              apache2 -v = gets version if available, if not it will say not available
+                              sudo apt install apache2-bin = installs apache2
+                              apaceh2 -v = gets version since now available
+                  WSL Ubuntu Troubleshooting to find apache2
+                              ls -l /lib/systemd/system/apache2.service = check if apache2 file exists
+                              sudo apt install --reinstall apache2 = reinstall apache2
+                              ls -l /lib/systemd/system/apache2.service = check again if it exists (eureka!)
+                  Status Check      
+                              sudo systemctl status apache2 = Query Status
+                              sudo systemctl start apache2 = Start Service 
+                              sudo systemctl status apache2 = Confirm Start 
+                              sudo systemctl stop apache2 = Stop Service
+                              sudo systemctl status apache2 = Confirm Stop
+
                   
 
       
