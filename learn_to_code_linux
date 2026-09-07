@@ -386,10 +386,17 @@ Understanding Linux Filesystem
                   "formatting" a partition = installing a specific filesystem, such as ext4 or XFS, to organize that space.
                   Generally, a filesystem resides within a single partition; however, in some circumstances, a filesystem can span more than one partition using symbolic links
                   mounting = "attach" the filesystem of a partition to a specific directory (mount point). For example, you might mount the partition /dev/sdb1 to the directory /home. From that moment on, any file you save in your home folder is physically written to that specific partition. 
-      New command from Learn Linux TV
-                  history = gives all commands performed in terminal
-      Filesystem Hierarchy Standard
-                  Definition: a specification that establishes the names, locations, and intended purposes of directories across Linux 
-                  
+      New commands 
+                  history = gives all commands performed in terminal (from Learn Linux TVon YouTube)
+                  which <command> = shows path of directory with command's executable
+      Filesystem Hierarchy Standard (FHS)
+                  Definition: a specification that establishes the names, locations, and intended purposes of directories across Linux
+                  / = highest level filesystem
+                  /root = superuser's administrator's account
+                  /home = contains user accounts, regular users' personal/home directories are usually stored.
+                  /etc = system-wide configuration files. If an application needs a settings file that affects all users, it lives here. 
+                  /usr/bin (/bin) = essential user-facing programs and commands (e.g., ls, cp, bash). On most modern distributions, /bin is a symbolic link to /usr/bin 
+                  /usr/sbin (/sbin) = system administration programs intended for use by the root user. 
+
 
       
