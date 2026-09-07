@@ -390,6 +390,16 @@ Understanding Linux Filesystem
                   history = gives all commands performed in terminal (from Learn Linux TVon YouTube)
                   which <command> = shows path of directory with command's executable
                   df = find how much free space, example: df -H /tmp 
+                  df -H = disk free listed in human-readable storage - Gigabyte (GB), base 1000
+                                    1 kB = 1,000 bytes
+                                    1 MB = 1,000 kB
+                                    1 GB = 1,000 MB
+                                    1,000 x 1,000 x 1,000 = 1,000,000,000 bytes
+                  df -h = disk free listed in binary storage units - gegibyte (GiB), base 1024
+                                    1 KiB = 1,024 bytes
+                                    1 MiB = 1,024 KiB      
+                                    1 GiB = 1,024 MiB
+                                    1,024 x 1,024 x 1,024 = 1,073,741,824 bytes
       Filesystem Hierarchy Standard (FHS)
                   Definition: a specification that establishes the names, locations, and intended purposes of directories across Linux
                   / = highest level filesystem
