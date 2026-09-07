@@ -389,6 +389,7 @@ Understanding Linux Filesystem
       New commands 
                   history = gives all commands performed in terminal (from Learn Linux TVon YouTube)
                   which <command> = shows path of directory with command's executable
+                  df = find how much free space, example: df -H /tmp 
       Filesystem Hierarchy Standard (FHS)
                   Definition: a specification that establishes the names, locations, and intended purposes of directories across Linux
                   / = highest level filesystem
@@ -397,6 +398,8 @@ Understanding Linux Filesystem
                   /etc = system-wide configuration files. If an application needs a settings file that affects all users, it lives here. 
                   /usr/bin (/bin) = essential user-facing programs and commands (e.g., ls, cp, bash). On most modern distributions, /bin is a symbolic link to /usr/bin 
                   /usr/sbin (/sbin) = system administration programs intended for use by the root user. 
-
-
+                  /usr/lib (/lib) = shared libraries required by programs in /bin and /sbin
+                  /var = variable data that changes during normal operation, such as log files (/var/log), print queues, and mail spools.
+                  /tmp = temporary files created by applications. These are not guaranteed to survive a reboot.
+                  
       
