@@ -378,8 +378,18 @@ Boot Process
                               sudo systemctl stop apache2 = Stop Service
                               sudo systemctl status apache2 = Confirm Stop
 Understanding Linux Filesystem
-            
-
+      Paritions and Filesystems
+                  physical storage =  the hardware, physical "container", a fixed area to be managed as a single unit
+                  logical organization = the software, the logical "method" of storage 
+                  partition  = represents a dedicated subsection of hard drive, the logical "method" of storage, partitions are identified as device files, such as /dev/sda1 for the first partition on your primary drive.
+                  filesystem = the logical structure that stores and accesses files within that space.
+                  "formatting" a partition = installing a specific filesystem, such as ext4 or XFS, to organize that space.
+                  Generally, a filesystem resides within a single partition; however, in some circumstances, a filesystem can span more than one partition using symbolic links
+                  mounting = "attach" the filesystem of a partition to a specific directory (mount point). For example, you might mount the partition /dev/sdb1 to the directory /home. From that moment on, any file you save in your home folder is physically written to that specific partition. 
+      New command from Learn Linux TV
+                  history = gives all commands performed in terminal
+      Filesystem Hierarchy Standard
+                  Definition: a specification that establishes the names, locations, and intended purposes of directories across Linux 
                   
 
       
