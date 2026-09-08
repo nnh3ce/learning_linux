@@ -402,6 +402,7 @@ Understanding Linux Filesystem
                                     1,024 x 1,024 x 1,024 = 1,073,741,824 bytes
       Filesystem Hierarchy Standard (FHS)
                   Definition: a specification that establishes the names, locations, and intended purposes of directories across Linux
+                  Removable Media: removable media such as USB drives and optical discs are also accessed through the filesystem tree rather than through separate drive letters. 
                   / = highest level filesystem
                   /root = superuser's administrator's account
                   /home = contains user accounts, regular users' personal/home directories are usually stored.
@@ -411,5 +412,22 @@ Understanding Linux Filesystem
                   /usr/lib (/lib) = shared libraries required by programs in /bin and /sbin
                   /var = variable data that changes during normal operation, such as log files (/var/log), print queues, and mail spools.
                   /tmp = temporary files created by applications. These are not guaranteed to survive a reboot.
-                  
+                  /dev = device files. Linux represents hardware (hard drives, terminals, USB devices) as files in this directory
+                  /proc = a virtual filesystem that exposes real-time information about running processes and the kernel. Nothing here is stored on disk; it is generated on demand. 
+                  /sys = a virtual filesystem providing a structured interface to kernel and hardware information.
+                  /boot = files required to start the system, including the Linux kernel itself. 
+                  /run = runtime data for processes started since the last boot, such as process ID files and lock files
+      Case Sensitivity
+                  Linux is case sensitive so uppercase and lowercase letters are seen as distinct.
+                  Convention: use lowercase letters when creating directories
+      The /usr Directory
+                  Definition:  originally stood for "Unix System Resources", and today it is best understood as the home of the operating system's general-purpose software layer not required for booting the system.
+                               directories directly under / contain only what is strictly necessary to boot the system and perform basic recovery tasks: the minimum needed before anything else is loaded.               
+                  /usr/bin   = the vast majority of user-facing commands and programs.
+                  /usr/sbin  = system administration tools not required at boot.
+                  /usr/lib   = shared libraries for programs in /usr/bin and /usr/sbin.
+                  /usr/share = architecture-independent data such as documentation and icons.
+                  /usr/local = software installed manually by the system administrator, outside the distribution's package manager.
+                  Key Takeaway: when you are looking for a program or tool on a Linux system, /usr/bin is the first place to look. 
+                                if you have installed software manually or compiled something from source, check /usr/local/bin.
       
