@@ -443,3 +443,5 @@ Command Line Operations
                   Argument = the target of the command, the exact file, path, or data the command should process
       Sudo (switch user and do)
                   Definition: allows a user to run commands with another user's privileges (typically root's) without logging in as that user directly
+Locating Applications
+      In general, executable programs and scripts are located in standard paths such as /bin, /usr/bin, /sbin, /usr/sbin directories, or somewhere under /opt.
