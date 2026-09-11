@@ -462,6 +462,11 @@ Locating Directories
                   cd ~ or cd = Changes to your home directory (shortcut name is ~ (tilde))
                   cd .. = Changes to parent directory (..)
                   cd - = Changes to previous working directory (- (minus))
-                  dirs = 
-                  pushd = 
-                  popd = 
+                  dirs = shows directory stacks
+                  pushd = changes directory
+                  pushd <directory> = adds directory to stack list
+                        Example: pushd /tmp
+                  popd = removes directory from top of stack list and changes to next one
+                  pushd -v = shows numbers assigned to directorys
+                  pushd +<number> = provides directory starting at 0 from left
+                  pushd -0 = the most rightmost directory (-1 is second, -2 is third, etc.)
