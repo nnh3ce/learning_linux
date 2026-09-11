@@ -456,4 +456,12 @@ Locating Applications
                                     Explanation:
                                                 type ll reveals that ll isn't a program at all but an alias that expands to ls -l --color=auto,
                                                 demonstrating how type tells you what a command really is (program, alias, built-in, or function)
-                  
+Locating Directories
+      Commands
+                  pwd = Displays the present working directory
+                  cd ~ or cd = Changes to your home directory (shortcut name is ~ (tilde))
+                  cd .. = Changes to parent directory (..)
+                  cd - = Changes to previous working directory (- (minus))
+                  dirs = 
+                  pushd = 
+                  popd = 
