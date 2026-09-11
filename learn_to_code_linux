@@ -445,3 +445,15 @@ Command Line Operations
                   Definition: allows a user to run commands with another user's privileges (typically root's) without logging in as that user directly
 Locating Applications
       In general, executable programs and scripts are located in standard paths such as /bin, /usr/bin, /sbin, /usr/sbin directories, or somewhere under /opt.
+      They can also appear in /usr/local/bin and /usr/local/sbin for manually installed software, and users may keep local binaries in their home directory, such as /home/student/bin.
+      Commands to Locate Programs:
+                  which <command> = provides path location
+                  whereis <command> =  locates the binary, its source code, and its manual pages
+                  type =  what a command actually is (a program on disk, a shell built-in, an alias, or a function)
+                                    Example:
+                                                $ type ll
+                                                ll is aliased to 'ls -l --color=auto'
+                                    Explanation:
+                                                type ll reveals that ll isn't a program at all but an alias that expands to ls -l --color=auto,
+                                                demonstrating how type tells you what a command really is (program, alias, built-in, or function)
+                  
