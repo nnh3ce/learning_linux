@@ -482,3 +482,16 @@ Absolute & Relative Paths
                   tree = shows directory tree o files & folders
                    sudo apt install tree = if tree is not installed by default on Ubuntu;
       tree -d = view just the directories and to suppress listing file names. 
+Links
+      Hard Link Defined: a hard link acts as an additional name for the exact same data on the disk. The file is only deleted from the disk once all hard links to it have been removed.
+                  Commands:
+                              ln = acts as an additional name for the exact same data on the disk. While it appears as if two files exist, they share the same inode number, a unique identifier for the data on the disk
+                              ls -li = two files share the same inode number, a unique identifier for the data on the disk. 
+                  Recommendation:
+                              ecommend against using hard links for files you intend to edit. Many modern editors perform "atomic saves" — writing your changes to a new file and renaming it over the original. 
+                              This breaks the hard link: the name you edited now points to new, separate data, while the other name still refers to the original inode and its old contents. 
+                              The two names are no longer the same file.
+      Soft (Symbolic) Links Defined: it has its own unique inode number and a distinct file type indicator (an l at the start of the permissions string, along with a -> pointing to the target)
+                              does not share the original file's data; it acts as a "pointer" or shortcut to the original file path.
+                  Commands
+                              ln -s =  
