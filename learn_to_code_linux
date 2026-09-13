@@ -485,7 +485,7 @@ Absolute & Relative Paths
 Links
       Hard Link Defined: a hard link acts as an additional name for the exact same data on the disk. The file is only deleted from the disk once all hard links to it have been removed.
                   Commands:
-                              ln = acts as an additional name for the exact same data on the disk. While it appears as if two files exist, they share the same inode number, a unique identifier for the data on the disk
+                              ln <file1> <file2>= acts as an additional name for the exact same data on the disk. While it appears as if two files exist, they share the same inode number, a unique identifier for the data on the disk
                               ls -li = two files share the same inode number, a unique identifier for the data on the disk. 
                   Recommendation:
                               ecommend against using hard links for files you intend to edit. Many modern editors perform "atomic saves" — writing your changes to a new file and renaming it over the original. 
@@ -494,4 +494,14 @@ Links
       Soft (Symbolic) Links Defined: it has its own unique inode number and a distinct file type indicator (an l at the start of the permissions string, along with a -> pointing to the target)
                               does not share the original file's data; it acts as a "pointer" or shortcut to the original file path.
                   Commands
-                              ln -s =  
+                              ln -s <file1> <file2> =  symbolic link does not share the original file's data; it acts as a "pointer" or shortcut to the original file path.  
+                              ls -li <file2> =  you will notice it has its own unique inode number and a distinct file type indicator (an l at the start of the permissions string, along with a -> pointing to the target).
+                  Benefits:
+                              Unlike hard links, symlinks can point to objects across different partitions, disks, or external media; a hard link is confined to a single filesystem.
+                              Symlinks occupy very little space, because they simply store the text path to the target rather than a copy of the data itself.
+                              A symlink can be updated to point to a new location without affecting the source file, which makes it a convenient way to create a short, stable name for a long or frequently changing path.
+                              Because a symlink refers to a path rather than to the data directly, it can point to a target that does not currently exist or is unavailable. If the target is deleted, moved, or not yet mounted, you are left with a "dangling link" that points to an invalid object.
+Navigating the Directory History
+      
+      Commands:            
+                  cd - = go back to the most recent directory
