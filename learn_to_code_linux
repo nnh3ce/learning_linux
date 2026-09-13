@@ -502,6 +502,13 @@ Links
                               A symlink can be updated to point to a new location without affecting the source file, which makes it a convenient way to create a short, stable name for a long or frequently changing path.
                               Because a symlink refers to a path rather than to the data directly, it can point to a target that does not currently exist or is unavailable. If the target is deleted, moved, or not yet mounted, you are left with a "dangling link" that points to an invalid object.
 Navigating the Directory History
-      
       Commands:            
                   cd - = go back to the most recent directory
+                  cat = used for viewing shorter files; it does not provide any scroll-back.
+                  tac = used to look at a file backwards, starting with the last line.
+                  less = used to view larger files because it is a paging program. It pauses at each screen full of text, provides scroll-back capabilities, and lets you search and navigate within the file.
+                        NOTE:Use / to search for a pattern in the forward direction and ? for a pattern in the backward direction. An older program named more is still used, but has fewer capabilities: "less is more".
+                  tail = used to print the last 10 lines of a file by default. For example, you can change the number of lines by doing -n 15 or just -15 if you want to look at the last 15 lines instead of the default.
+                  head = The opposite of tail; by default, it prints the first 10 lines of a file.
+
+
