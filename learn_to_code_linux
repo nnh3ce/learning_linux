@@ -525,3 +525,5 @@ Navigating the Directory History
                   rm -r = removes directory/folder (means remove -recursive)
                   rm -f = forcefully remove a file (no prompts)
                   rm -i = interactively remove a file (prompts before each)
+                  mkdir = create directory
+                  mkdir -p <parent_dir/file_name> = make a directory whose parent directory doesn't exist yet
