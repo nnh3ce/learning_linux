@@ -512,3 +512,16 @@ Navigating the Directory History
                   head = The opposite of tail; by default, it prints the first 10 lines of a file.
                   wc = gives number of lines, words, bytes
                   touch = create a file if not created, modify permission access, modify timestamps (use flag -t)
+                  touch -t [[CC]YY]MMDDhhmm[.ss] <file_name>  = adds new timestamp to file
+                  mv = move files or rename files
+                              Examples:
+                                          mv source destination
+                                          mv notes.txt notes_old.txt
+                                          mv notes.txt /home/student/documents/
+                                                *Note: The destination directory must already exist. If it doesn't, the result depends on the trailing slash: written with a trailing / as above, 
+                                                       mv reports an error; written without one (mv notes.txt /home/student/documents), mv instead renames notes.txt to a file called documents, 
+                                                       which is rarely what you intended.
+                  rm = delete files. Example:  rm notes.txt
+                  rm -r = removes directory/folder (means remove -recursive)
+                  rm -f = forcefully remove a file (no prompts)
+                  rm -i = interactively remove a file (prompts before each)
