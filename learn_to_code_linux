@@ -527,3 +527,7 @@ Navigating the Directory History
                   rm -i = interactively remove a file (prompts before each)
                   mkdir = create directory
                   mkdir -p <parent_dir/file_name> = make a directory whose parent directory doesn't exist yet
+                  find = find [path] [options] [expression]
+Path: Where to start searching (e.g., ~/Documents).
+Options: Refine your search (e.g., -type for files/directories).
+Expression: Criteria like filenames or sizes
