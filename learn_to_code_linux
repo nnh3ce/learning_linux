@@ -538,3 +538,15 @@ Navigating the Directory History
                   man -f <topic> = Lists available pages that match a name exactly. This is identical to the whatis command.
                   man -k <keyword> = searches page descriptions for a keyword, finding related pages even when the word isn't in the command name. This one is identical to the apropos command.
                         man -k compress = find all programs that compress files or folders
+                  man -a <keyword> = display every page matching a given name, one after another across all sections, use the -a option
+                  Man Sections:
+                        Section 1 = Executable programs and shell commands; ls, cp, grep
+                        Section 2 = System calls (functions provided by the kernel); open(), read(), write()
+                        Section 3 = Library calls (functions in program libraries); printf(), malloc()      
+                        Section 4 = Special files; Device files found in /dev, such as /dev/null
+                        Section 5 = File formats and conventions; Configuration files like /etc/fstab, file formats like crontab(5)
+                        Section 6 = Games; Games and screensavers
+                        Section 7 = Miscellaneous; Conventions, macro packages, standards
+                        Section 8 = System administration commands; Privileged commands used by root, such as fdisk and mount
+                        Section 9 = Kernel routines; Non-standard internal kernel interfaces
+Note: Section 9 is inconsistently populated across distros (many systems have few or no section 9 pages).
