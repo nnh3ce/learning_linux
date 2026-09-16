@@ -534,4 +534,6 @@ Navigating the Directory History
                   man <command> = go to manual page for item
                         / = search for characters in man
                         n = go to next search word
-
+                  less = command-line program for viewing text files one screen at a time
+                  man -f <topic> = Lists available pages that match a name exactly. This is identical to the whatis command.
+                  man -k <keyword> = searches page descriptions for a keyword, finding related pages even when the word isn't in the command name. This one is identical to the apropos command.
