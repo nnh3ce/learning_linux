@@ -537,3 +537,4 @@ Navigating the Directory History
                   less = command-line program for viewing text files one screen at a time
                   man -f <topic> = Lists available pages that match a name exactly. This is identical to the whatis command.
                   man -k <keyword> = searches page descriptions for a keyword, finding related pages even when the word isn't in the command name. This one is identical to the apropos command.
+                        man -k compress = find all programs that compress files or folders
