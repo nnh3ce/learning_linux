@@ -528,6 +528,10 @@ Navigating the Directory History
                   mkdir = create directory
                   mkdir -p <parent_dir/file_name> = make a directory whose parent directory doesn't exist yet
                   find = find [path] [options] [expression]
-Path: Where to start searching (e.g., ~/Documents).
-Options: Refine your search (e.g., -type for files/directories).
-Expression: Criteria like filenames or sizes
+                        Path: Where to start searching (e.g., ~/Documents).
+                        Options: Refine your search (e.g., -type for files/directories).
+                        Expression: Criteria like filenames or sizes
+                  man <command> = go to manual page for item
+                        / = search for characters in man
+                        n = go to next search word
+
