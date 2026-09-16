@@ -531,6 +531,8 @@ Navigating the Directory History
                         Path: Where to start searching (e.g., ~/Documents).
                         Options: Refine your search (e.g., -type for files/directories).
                         Expression: Criteria like filenames or sizes
+Man
+      Commands:
                   man <command> = go to manual page for item
                         / = search for characters in man
                         n = go to next search word
@@ -549,4 +551,9 @@ Navigating the Directory History
                         Section 7 = Miscellaneous; Conventions, macro packages, standards
                         Section 8 = System administration commands; Privileged commands used by root, such as fdisk and mount
                         Section 9 = Kernel routines; Non-standard internal kernel interfaces
-Note: Section 9 is inconsistently populated across distros (many systems have few or no section 9 pages).
+                                    Note: Section 9 is inconsistently populated across distros (many systems have few or no section 9 pages).
+GNU 
+      Commands:      
+                  info = open the top-level directory of all available topics, Info searches all installed Info files for that topic.
+                  info <command> =  jump directly to a specific utility
+                  
