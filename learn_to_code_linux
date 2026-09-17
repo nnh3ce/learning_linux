@@ -531,6 +531,14 @@ Navigating the Directory History
                         Path: Where to start searching (e.g., ~/Documents).
                         Options: Refine your search (e.g., -type for files/directories).
                         Expression: Criteria like filenames or sizes
+Standard File Streams (descriptors)
+      Commands
+                  stdin = Usually, stdin comes from your keyboard, can be supplied from a file, or from the output of a previous command through a pipe.
+                  stdout = often redirected into a file, so a command's results are saved rather than displayed.
+                  stderr = often redirected to a separate error-logging file to keep error and warning messages out of the normal output, is used only for error and warning messages, a command that runs successfully typically writes nothing to it.
+      Note: 
+                  stdin is file descriptor 0, stdout is 1, and stderr is 2. If a command opens additional files beyond these three, they are assigned the next available numbers, starting at 3 and increasing from there.
+
 Man Pages
       Commands:
                   man <command> = go to manual page for item
@@ -556,4 +564,5 @@ GNU Info System
       Commands:      
                   info = open the top-level directory of all available topics, Info searches all installed Info files for that topic.
                   info <command> =  jump directly to a specific utility
-                  
+      
+      
