@@ -545,6 +545,8 @@ Standard File Streams (descriptors)
                   "|" = combine commands                  
                   ">" or "<" = redirect overwrite
                   ">>" or "<<" = redirect append
+                  "2>" = redirect stderr to file
+                  do_something > all-output-file 2>&1 =  both normal output and error messages to go to the same place
                   
       Note: 
                   stdin is file descriptor 0, stdout is 1, and stderr is 2. If a command opens additional files beyond these three, they are assigned the next available numbers, starting at 3 and increasing from there.
