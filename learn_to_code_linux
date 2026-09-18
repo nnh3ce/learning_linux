@@ -542,11 +542,26 @@ Standard File Streams (descriptors)
                                     grep -i "hello" file.txt = "-i" means --ignore-case, find word in '.txt' file
                                     grep -n "hello" file.txt = "-n" means --line-number, finds word in file with line number
 
-                  "|" = combine commands                  
+                  "|" = combine commands, takes the output of one command and feeds it directly in as the input of the next.      
+                        Examples:
+                                    ls | wc -l = s the files in the current directory, and its output is piped into wc -l, which counts the number of lines, giving you a count of the files, without either command needing to save anything to a file in between.
                   ">" or "<" = redirect overwrite
                   ">>" or "<<" = redirect append
                   "2>" = redirect stderr to file
                   do_something > all-output-file 2>&1 =  both normal output and error messages to go to the same place
+                  awk = finds, extracts, and processes specific pieces of text/data, especially columns.
+                  sed = finds and replaces or modifies text.
+                  cut = extracts specific columns or sections from each line.
+                  sort = sorts lines of text.
+                  uniq = removes/counts consecutive duplicate lines.
+                  head = shows the beginning of a file or output.
+                  tail = shows the end of a file or output.
+                  wc = counts lines, words, and characters/bytes.
+                  find = searches for files and directories based on criteria.
+                  xargs = turns input from one command into arguments for another command.
+                  jq = searches, filters, and transforms JSON data.
+                  curl = sends requests to servers and transfers data over a network.
+
                   
       Note: 
                   stdin is file descriptor 0, stdout is 1, and stderr is 2. If a command opens additional files beyond these three, they are assigned the next available numbers, starting at 3 and increasing from there.
