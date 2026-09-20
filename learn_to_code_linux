@@ -565,12 +565,12 @@ Standard File Streams (descriptors)
 Searching for Files
       Commands:
                   locate = performs a search by taking advantage of a previously built database of files and directories on your system, matching all entries that contain a specified text string
-                  find = 
                   ? = Matches any single character
                   * = Matches any string of characters (including none)
                   [set] = Matches any single character in the set; for example, [adf] matches any occurrence of a, d, or f
                   [!set] = Matches any single character not in the set
                   du = estimate file space usage
+                  find = find [location] [condition]; when given only a starting directory and no other conditions, find lists all files in that directory and all of its subdirectories.
 
 
 Man Pages
