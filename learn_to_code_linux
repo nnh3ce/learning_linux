@@ -571,8 +571,9 @@ Searching for Files
                   [!set] = Matches any single character not in the set
                   du = estimate file space usage
                   find = find [location] [condition]; when given only a starting directory and no other conditions, find lists all files in that directory and all of its subdirectories.
-
-
+                  find -name "*.swp" -exec rm {} ';' =,To find and remove all files that end in .swp, The {} (curly braces) is a placeholder that is replaced with each filename found, and the command is run once per matching file. You must end the command with either ';' (including the single quotes) or \; .Both forms work.
+                  find / -ctime 3 = Here, -ctime refers to when the file's inode metadata (ownership, permissions, etc.) last changed. Note that this is not the same as the file's creation time; standard find options work with change, access, and modification times, not creation time. You can also search by last-accessed time (-atime) or last-modified time (-mtime). The number is a count of days, and can be written as n (exactly that many days), +n (more than that many days), and -n (fewer than that many days). Similar options exist for times measured in minutes (-cmin, -amin, -mmin).
+                  find / -size 0 = By default, size is measured in 512-byte blocks. You can also specify other units: c (bytes), k (kilobytes), M (megabytes), G (gigabytes), and so on. As with time above, sizes can be written as n, +n, or -n. For full details, consult the find man page.
 Man Pages
       Commands:
                   man <command> = go to manual page for item
@@ -592,7 +593,7 @@ Man Pages
                         Section 6 = Games; Games and screensavers
                         Section 7 = Miscellaneous; Conventions, macro packages, standards
                         Section 8 = System administration commands; Privileged commands used by root, such as fdisk and mount
-                        Section 9 = Kernel routines; Non-standard internal kernel interfaces
+                        Section 9 = Kernel routines; Non-standard internal kernel interfaces, 
                                     Note: Section 9 is inconsistently populated across distros (many systems have few or no section 9 pages).
 GNU Info System
       Commands:      
