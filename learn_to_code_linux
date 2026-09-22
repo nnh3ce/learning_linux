@@ -599,7 +599,19 @@ GNU Info System
       Commands:      
                   info = open the top-level directory of all available topics, Info searches all installed Info files for that topic.
                   info <command> =  jump directly to a specific utility
+                  Tab = Move cursor to the next link (* or ::)
+                  Enter = Follow the link currently under your cursor
+                  n = Move to the Next node (at the same level)
+                  p = Move to the Previous node (at the same level)
+                  u = Move Up to the parent node
+                  l = Go back to the Last node you visited (like a browser's Back button)
+                  h = Open Info's built-in interactive tutorial
+                  q = Quit and return to the shell prompt
 
+
+Package Managers
+      A low-level tool (such as dpkg or rpm) = handles the details of unpacking individual packages, running their installation scripts, and getting the software installed correctly.
+      A high-level tool (such as apt, dnf, or zypper) = works with groups of packages, downloads them from the software repositories, and resolves dependencie
 
       
       
