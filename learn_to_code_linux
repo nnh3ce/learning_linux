@@ -614,5 +614,9 @@ Package Managers
       A low-level tool (such as dpkg or rpm) = handles the details of unpacking individual packages, running their installation scripts, and getting the software installed correctly.
       A high-level tool (such as apt, dnf, or zypper) = works with groups of packages, downloads them from the software repositories, and resolves dependencie
 
+Windows Download Folder Location
+      Path = /mnt/c/Users/<WindowsUsername>/Downloads
+
+
       
       
