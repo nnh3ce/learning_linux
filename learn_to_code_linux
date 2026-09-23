@@ -601,6 +601,7 @@ GNU Info System
                   info <command> =  jump directly to a specific utility
                   Tab = Move cursor to the next link (* or ::)
                   Enter = Follow the link currently under your cursor
+                  Nodes = act as the chapters and sections of a manual, arranged in a tree structure: a top-level node branches into chapters, which branch into sub-sections.
                   n = Move to the Next node (at the same level)
                   p = Move to the Previous node (at the same level)
                   u = Move Up to the parent node
