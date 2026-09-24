@@ -616,7 +616,15 @@ Package Managers
 
 Windows Download Folder Location
       Path = /mnt/c/Users/<WindowsUsername>/Downloads
-
-
+Text Editors
+      Commands:
+                  nano <file_name> = opens editor
+                  Ctrl+O (WriteOut) = Saves the file (press Enter to confirm the filename).
+                  Ctrl+X (Exit) = Closes nano (prompts to save if changes were made).
+                  Ctrl+W (Where Is) = Searches for text within the file.
+                  Ctrl+K (Cut Text) = Cuts the current line into the clipboard buffer.
+                  Ctrl+U (Uncut Text) = Pastes the line from the buffer at the cursor position.
+                  Ctrl+G (Get Help) = Opens the built-in help screen.
+                  
       
       
