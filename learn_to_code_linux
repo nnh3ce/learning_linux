@@ -616,15 +616,32 @@ Package Managers
 
 Windows Download Folder Location
       Path = /mnt/c/Users/<WindowsUsername>/Downloads
-Text Editors
+Text Editors - vi
+      Vi operates in modes, gotta know which mode to use effectively
+      Vi modes
+                  default mode = when first opens, keystrokes interpreted as navigation and editing commands, moves cursor, deletes a line
+                  insert mode = type text into file
+                  line mode = typed at bottom of screen
       Commands:
-                  nano <file_name> = opens editor
-                  Ctrl+O (WriteOut) = Saves the file (press Enter to confirm the filename).
-                  Ctrl+X (Exit) = Closes nano (prompts to save if changes were made).
-                  Ctrl+W (Where Is) = Searches for text within the file.
-                  Ctrl+K (Cut Text) = Cuts the current line into the clipboard buffer.
-                  Ctrl+U (Uncut Text) = Pastes the line from the buffer at the cursor position.
-                  Ctrl+G (Get Help) = Opens the built-in help screen.
+                  i = insert mode
+                  esc = exit insert mode
+                  : = manage files
+                  :w = save file without exiting
+                  :q = exits vi
+                  :wq = saves changes and exits
+                  :q! = quits without saving
+                  i = Insert (before), Enters Insert mode before the current cursor position. 
+                  a = Append (after), Enters Insert mode after the current cursor position.
+                  Esc = Exit Mode, Leaves Insert/Line mode and returns to Command mode.
+                  x = Delete Character, Deletes the single character under the cursor.
+                  dd = Delete Line, Cuts/deletes the current line.
+                  yy = Yank Line, Copies (yanks) the current line. 
+                  p =  Paste, Pastes the last deleted or yanked line below the cursor.
+                  u = Undo, Reverses the last change made.
+                  /text = Search, Searches forward for text (press Enter, then n for next match).
+                  vimtutor = tutorial, 30 mins.
+
+                  
                   
       
       
