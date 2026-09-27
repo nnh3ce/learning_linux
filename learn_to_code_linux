@@ -642,7 +642,9 @@ Text Editors - vi
                   vimtutor = tutorial, 30 mins.
                   dd = in edit mode, means to delete
                   u = means to undo
-
+File Operations
+      \  = root
+      root user = administrator account, superuser with full system priveleges
                   
                   
       
