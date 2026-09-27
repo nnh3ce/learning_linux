@@ -640,6 +640,8 @@ Text Editors - vi
                   u = Undo, Reverses the last change made.
                   /text = Search, Searches forward for text (press Enter, then n for next match).
                   vimtutor = tutorial, 30 mins.
+                  dd = in edit mode, means to delete
+                  u = means to undo
 
                   
                   
