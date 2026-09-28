@@ -647,8 +647,9 @@ File Operations
       root user = administrator account, superuser with full system priveleges
       mount = attach
       filesystem = the underlying method an operating system uses to organize, store, and retrieve files on a storage device
-      journaling filesystem = logs pending changes to a dedicated area (the journal) before writing them to the main disk.
-                  
+      journaling filesystem = logs pending changes to a dedicated area (the journal) before writing them to the main disk. 
+                              If your system suddenly loses power during a write operation, the kernel checks the journal upon reboot to repair incomplete operations cleanly, preventing filesystem corruption.
+      network filesystem = storage lives on a remote server accessible over a network connection.  Enterprise Network Storage - Technologies such as Ceph, Lustre, and OpenAFS used in cloud infrastructure and high-performance computing clusters.        
                   
       
       
