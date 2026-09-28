@@ -647,6 +647,7 @@ File Operations
       root user = administrator account, superuser with full system priveleges
       mount = attach
       filesystem = the underlying method an operating system uses to organize, store, and retrieve files on a storage device
+      journaling filesystem = logs pending changes to a dedicated area (the journal) before writing them to the main disk.
                   
                   
       
