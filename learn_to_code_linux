@@ -650,6 +650,13 @@ File Operations
       journaling filesystem = logs pending changes to a dedicated area (the journal) before writing them to the main disk. 
                               If your system suddenly loses power during a write operation, the kernel checks the journal upon reboot to repair incomplete operations cleanly, preventing filesystem corruption.
       network filesystem = storage lives on a remote server accessible over a network connection.  Enterprise Network Storage - Technologies such as Ceph, Lustre, and OpenAFS used in cloud infrastructure and high-performance computing clusters.        
-                  
+Partitions
+      partition = a section of a physical disk that has been set aside to be used as a self-contained unit (a home for your file system on storage). Why? OS on one and personal files on another paritition so if one filles up the other isn't affected.
+      Standard Partitions when installing Ubuntu or RHEL
+            EFI System Partition - /boot/efi, for booting system
+            Root partition - contains OS, apps, and sys files
+            Swap space - vm memory overflow (now placed under root)
+Mount Points (attaching partitions)
+
       
       
