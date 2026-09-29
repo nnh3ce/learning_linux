@@ -660,5 +660,10 @@ Mount Points (attaching partitions)
       Commands
             mount = lists every filesystem currently attached
             df -TH = cleaner version of mount command
+Linux Network File System (NFS)
+      Defined
+            Filesystem live on another computer and accessed over a network - distributed (network) filesystem. Data is traveling across netowrk even though to user it behaves  like any other part of tree.
+      Model
+            client-server: server offers directory to share (/etc/exports) and clients attach share directory into their own trees by mounting it like a local filesystem.
       
       
