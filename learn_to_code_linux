@@ -665,5 +665,10 @@ Linux Network File System (NFS)
             Filesystem live on another computer and accessed over a network - distributed (network) filesystem. Data is traveling across netowrk even though to user it behaves  like any other part of tree.
       Model
             client-server: server offers directory to share (/etc/exports) and clients attach share directory into their own trees by mounting it like a local filesystem.
+      Location
+            /etc/exports = directories a server is willing to share
+      Single entry example
+            /project *.example.com(rw) = offer's server's /projects dirotyr ot any hose in the example.com domain wiht read and write access. Once shared a client can mount it adn use /projects as if it were a local file.
+            
       
       
