@@ -669,6 +669,10 @@ Linux Network File System (NFS)
             /etc/exports = directories a server is willing to share
       Single entry example
             /project *.example.com(rw) = offer's server's /projects dirotyr ot any hose in the example.com domain wiht read and write access. Once shared a client can mount it adn use /projects as if it were a local file.
+      NFS Examples
+            Ceph - Scalable, distributed object and block storage for cloud environments
+            Lustre - High-performance clustered filesystem used in supercomputing centers.
+            Open AFS - A location-transparent distributed filesystem focused on wide-area networks.
             
-      
+            
       
