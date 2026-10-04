@@ -673,6 +673,17 @@ Linux Network File System (NFS)
             Ceph - Scalable, distributed object and block storage for cloud environments
             Lustre - High-performance clustered filesystem used in supercomputing centers.
             Open AFS - A location-transparent distributed filesystem focused on wide-area networks.
+
+Finding Way Around Filesystem
+      /home 
+            Where ordinary users store personal files, each user gets own subdirecotry.
+            stores documents, donwloads, personal settings
+            large organizations organzied subdirectories  by group or role
+      /root
+            personal home directory of the root user or system administrator
+            don't confuse with root directory (/) - the top of the entire filesystem, /root is root user's home directory.
+            separate places
+            
             
             
       
