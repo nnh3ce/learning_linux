@@ -683,7 +683,14 @@ Finding Way Around Filesystem
             personal home directory of the root user or system administrator
             don't confuse with root directory (/) - the top of the entire filesystem, /root is root user's home directory.
             separate places
-            
+      /bin (binaries)
+            holds eesential command programs for system to function, everyday commands every user relies on like cat, cp, ls, mv rm
+            usually symbolic link pointing to /usr/bin 
+      /sbin
+            holds essential programs meant for system administration
+            tools like fsck (filesystem check) and ip (network configuration)
+            usually symbolic link pointing to /usr/sbin 
+            Note: Historically, /user/bin & /user/sbin were separate directories; now they've been unified, so /bin/ls and /usr/bin/ls are the same file. You don't need to worry about the distinction on a day-to-day basis.            
             
             
       
