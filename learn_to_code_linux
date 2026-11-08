@@ -725,3 +725,25 @@ Finding Way Around Filesystem
             a memory-based area for runtime data that programs need while the system is running (and, on some systems, where removable media mounts as /run/media/<username>/...). It's cleared on every reboot.
       /mnt 
             a traditional, generic spot for temporarily mounting a filesystem by hand. If you're manually mounting something just to poke at it, /mnt is the conventional place.
+      /tmp
+            These are temporary files. Anything here may be deleted automatically, especially on reboot, so never keep anything important in /tmp
+      /opt
+            They include optional, self-contained third-party software, often commercial applications that install everything in one place.
+      /srv
+            Contains data served by the system to others, such as the files for a web or FTP server.
+      /sys
+            Like /proc, this is a pseudo-filesystem exposing information about devices and the kernel.
+      
+Comparing  & Identifying Files
+      Commands: 
+            diff = compares two text files line by line and reports what's different. for text files only.
+                   syntax:  $diff file1 file2, 
+                   syntax:  $diff -r dir1 dir2 
+            cmp = compares two binary files line by line and reports what's different.
+            meld & vimdiff & diffuse = visual comparison, side-by-side with changes highlighted
+            patch =  Patches are produced by diff (usually in the unified format you just saw) and applied by the patch command, which updates an older file to match the newer one. Share just the differences: a small file, called a patch, that lists exactly what changed
+            diff3 = compares three files at once. It's useful when two people have independently edited the same original file: diff3 can show how each person's version diverged from the common starting poin 
+                    syntax: $diff3 my_file common_file their_file
+            file
+
+            
