@@ -709,5 +709,19 @@ Finding Way Around Filesystem
             shows live system information, what system is doing right now.
             examples: /proc/cpuinfo, /proc/meminfo, /proc/version, /proc/mounts
                       /proc/<PID> = a direcdtory for every running process, named by process ID (sameas as in pd)
-
-      
+            *Think of /proc as a live dashboard for the running system, dressed up as ordinary files so you can read it with the same tools (cat, less) you'd use on anything else. For example, running the cat /proc/version command shows exactly which kernel your system is running.
+      /dev
+            contains device nodes, special files that represent hardware devices attached to system
+            examples: /dev/sda1 - first parition on the first disk, /dev/null - special black hole that dicards anything written to it
+      /boot
+            files need to t start system before main system is running
+            key pieces part of the Linux kernal itself - vmvlinuz & initramfs
+      /lib & /lib64
+            holds shared libraries, which are resuable chunks of code that many programs rely on
+            shared libaraies usually end in ".so"(shared object)
+      /media  
+            where removable media (USB drives, SD cards, DVDs) are mounted automatically by the desktop, usually under /media/<username>/<drive-name>.
+      /run 
+            a memory-based area for runtime data that programs need while the system is running (and, on some systems, where removable media mounts as /run/media/<username>/...). It's cleared on every reboot.
+      /mnt 
+            a traditional, generic spot for temporarily mounting a filesystem by hand. If you're manually mounting something just to poke at it, /mnt is the conventional place.
