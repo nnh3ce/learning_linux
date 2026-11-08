@@ -675,8 +675,10 @@ Linux Network File System (NFS)
             Open AFS - A location-transparent distributed filesystem focused on wide-area networks.
 
 Finding Way Around Filesystem
+      /
+             root, superuser with full system priveleges          
       /home 
-            Where ordinary users store personal files, each user gets own subdirecotry.
+            ordinary users store personal files, each user gets own subdirecotry. Usually shown by the shorthand ~
             stores documents, donwloads, personal settings
             large organizations organzied subdirectories  by group or role
       /root
@@ -691,6 +693,21 @@ Finding Way Around Filesystem
             tools like fsck (filesystem check) and ip (network configuration)
             usually symbolic link pointing to /usr/sbin 
             Note: Historically, /user/bin & /user/sbin were separate directories; now they've been unified, so /bin/ls and /usr/bin/ls are the same file. You don't need to worry about the distinction on a day-to-day basis.            
-            
-            
+      /usr
+            means "Unix System Resources"
+            contains user-facing pprograms and supporting files, usually largest part of the system
+            /sbin & /bin contain commands to start & use system, /usr contains everything else
+      /etc
+            system-wide config files
+            controls how system and services behave
+      /var
+            means "variable"
+            holds var files that are expected to grow and change as system runs
+            examples: log files under /var/log (1st place to look when troubleshooting), print queues, mail sppols, caches
+      /proc
+            files generated on the fly by the kernel, in memory, presented as if they were files, a psuedo-filesystem
+            shows live system information, what system is doing right now.
+            examples: /proc/cpuinfo, /proc/meminfo, /proc/version, /proc/mounts
+                      /proc/<PID> = a direcdtory for every running process, named by process ID (sameas as in pd)
+
       
