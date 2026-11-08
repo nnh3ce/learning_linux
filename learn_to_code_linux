@@ -744,6 +744,9 @@ Comparing  & Identifying Files
             patch =  Patches are produced by diff (usually in the unified format you just saw) and applied by the patch command, which updates an older file to match the newer one. Share just the differences: a small file, called a patch, that lists exactly what changed
             diff3 = compares three files at once. It's useful when two people have independently edited the same original file: diff3 can show how each person's version diverged from the common starting poin 
                     syntax: $diff3 my_file common_file their_file
-            file
+            file = examines a file's actual contents, looking for tell-tale signatures inside it, and reports what kind of object it is: plain text, an image, a compiled program, a shared library, a shell script, and so on.This is exactly why file is so useful: it tells you what you're really dealing with, regardless of what the name suggests.
+                    syntax: $file /bin/ls -> /bin/ls: elf 640bit LSB pie executable, x86-64
+            
+            
 
             
